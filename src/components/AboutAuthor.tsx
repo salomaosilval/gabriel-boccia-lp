@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Section from './Section';
 
 export default function AboutAuthor() {
@@ -6,13 +7,15 @@ export default function AboutAuthor() {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="order-2 md:order-1">
           <div className="bg-linear-to-br from-orange-50 to-gray-50 rounded-2xl p-8 border border-orange-100">
-            <div className="aspect-square max-w-xs mx-auto bg-linear-to-br from-blue-200 via-yellow-200 to-orange-200 rounded-lg mb-6 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4">👤</div>
-                <div className="text-2xl font-bold text-gray-800">
-                  Gabriel Boccia
-                </div>
-              </div>
+            <div className="relative aspect-square max-w-xs mx-auto rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/gabriel-boccia.jpg"
+                alt="Gabriel Boccia - Especialista em Oratória Política"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 400px"
+                priority
+              />
             </div>
           </div>
         </div>

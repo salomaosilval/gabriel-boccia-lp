@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Button from './Button';
 
 export default function Hero() {
@@ -69,28 +70,28 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center md:justify-end">
-            <div className="relative w-full max-w-md">
-              <div className="aspect-2/3 bg-linear-to-br from-orange-600/20 to-gray-800 rounded-lg shadow-2xl border border-orange-600/30 p-8 flex flex-col justify-between">
-                <div className="space-y-4">
-                  <div className="h-2 w-20 bg-orange-500 rounded"></div>
-                  <div className="space-y-2">
-                    <div className="h-8 bg-white/10 rounded w-3/4"></div>
-                    <div className="h-8 bg-white/10 rounded w-2/3"></div>
-                  </div>
+            <div className="relative w-full max-w-2xl">
+              <div className="flex gap-4 items-start">
+                <div className="relative w-1/2 aspect-2/3 rounded-lg shadow-2xl overflow-hidden group">
+                  <Image
+                    src="/livro-capa.jpg"
+                    alt="As Chaves Internas da Oratória - Capa do Livro"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 50vw, 200px"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="text-center space-y-2">
-                  <div className="text-2xl font-bold text-orange-500">
-                    AS CHAVES INTERNAS
-                  </div>
-                  <div className="text-xl font-bold text-orange-500">
-                    DA ORATÓRIA
-                  </div>
-                  <div className="text-sm text-gray-400 mt-4">
-                    Foco para candidatos políticos
-                  </div>
-                  <div className="text-lg text-white mt-6 font-semibold">
-                    GABRIEL BOCCIA
-                  </div>
+                <div className="relative w-1/2 aspect-2/3 rounded-lg shadow-2xl overflow-hidden group">
+                  <Image
+                    src="/livro-verso.jpg"
+                    alt="As Chaves Internas da Oratória - Verso do Livro"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 50vw, 200px"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
             </div>
